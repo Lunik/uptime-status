@@ -24,15 +24,22 @@ body{
 .container{
 	margin: auto;
 	width: 70%;
+	min-width: 750px;
 }
 
+@media only screen and (max-width: 768px) {
+	.container{
+		width: 90%;
+		min-width: 0px;
+	}
+}
 /************/
 /*	  App	*/
 /************/
 .app{
 	display: block;
 
-	margin: 10px;
+	margin: 10px 0px 10px 0px;
 	padding: 10px;
 
 	border: 1px solid grey;
@@ -134,9 +141,17 @@ body{
 
 .reload{
 	width: 70%;
+	min-width: 750px;
 	margin: auto;
 
 	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.reload{
+		width: 90%;
+		min-width: 0px;
+	}
 }
 
 .reload *{
@@ -147,7 +162,7 @@ body{
 	-webkit-appearance: none;
   	appearance: none;
 
-  	width: 95%;
+  	width: 100%;
   	height: 5px;
 
 }
