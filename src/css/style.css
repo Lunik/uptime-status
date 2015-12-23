@@ -8,6 +8,9 @@ html,body{
 body{
 	background-color: #111;
 	color: #AAA;
+
+	margin: 0px;
+	padding: 0px;
 }
 
 /************/
@@ -24,7 +27,7 @@ body{
 .container{
 	margin: auto;
 	width: 70%;
-	min-width: 750px;
+	min-width: 700px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -57,14 +60,14 @@ body{
 /************/
 .app .app-monitors{
 	display: inline-block;
-	width: 90%;
+	width: 85%;
 }
 
 /* Uptime value */
 .app .app-uptime{
 	display: inline-block;
 
-	width: 10%;
+	width: 15%;
 	text-align: right;
 }
 .app-uptime[etat="0"] {
