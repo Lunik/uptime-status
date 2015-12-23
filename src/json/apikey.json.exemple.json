@@ -1,0 +1,30 @@
+{
+	"Main":{
+		"server":{
+			"name":"Server",
+			"key":"uptimerobot api key"
+		},
+		"web":{	
+			"name":"Web",
+			"key":"uptimerobot api key"
+		},
+		"status":{	
+			"name":"Status",
+			"key":"uptimerobot api key"
+		}
+	},
+	"Social":{
+		"twitter":{
+			"name":"Twitter",
+			"key":"uptimerobot api key"
+		},
+		"github":{
+			"name":"Github",
+			"key":"uptimerobot api key"
+		},
+		"youtube":{
+			"name":"Youtube",
+			"key":"uptimerobot api key"
+		}
+	}
+}
