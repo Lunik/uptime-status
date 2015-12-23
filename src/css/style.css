@@ -1,0 +1,171 @@
+/************/
+/*	Default	*/
+/************/
+html,body{
+	width: 100%;
+}
+
+body{
+	background-color: #111;
+	color: #AAA;
+}
+
+/************/
+/*	 Main	*/
+/************/
+.title{
+	text-align: center;
+}
+
+.title img{
+	width: 20%;
+}
+
+.container{
+	margin: auto;
+	width: 70%;
+}
+
+/************/
+/*	  App	*/
+/************/
+.app{
+	display: block;
+
+	margin: 10px;
+	padding: 10px;
+
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+.app .app-name{
+	margin: 5px;
+
+	font-size: 20px;
+}
+
+/************/
+/* Monitors	*/
+/************/
+.app .app-monitors{
+	display: inline-block;
+	width: 90%;
+}
+
+/* Uptime value */
+.app .app-uptime{
+	display: inline-block;
+
+	width: 10%;
+	text-align: right;
+}
+.app-uptime[etat="0"] {
+	color: #675f5f;
+}
+.app-uptime[etat="1"] {
+	color: #32c8de;
+}
+.app-uptime[etat="2"] {
+	color: #27AE60;
+}
+.app-uptime[etat="8"] {
+	color: #f7a253;
+}
+.app-uptime[etat="9"] {
+	color: #f75353;
+}
+
+/* status value */
+.app .app-status{
+	text-align: right;
+}
+.app-status[etat="0"] {
+	color: #675f5f;
+}
+.app-status[etat="1"] {
+	color: #32c8de;
+}
+.app-status[etat="2"] {
+	color: #27AE60;
+}
+.app-status[etat="8"] {
+	color: #f7a253;
+}
+.app-status[etat="9"] {
+	color: #f75353;
+}
+
+/************/
+/*	Monitor	*/
+/************/
+.app .monitor{
+	display: inline-block;
+
+	padding: 5px;
+	margin: 5px;
+
+	border-radius: 5px;
+
+	color: white;
+	font-size: 80%;
+	cursor: pointer;
+}
+
+.monitor[etat="0"]{
+	background-color: #675f5f;
+}
+.monitor[etat="1"]{
+	background-color: #32c8de;
+}
+.monitor[etat="2"]{
+	background-color: #27AE60;
+}
+.monitor[etat="8"]{
+	background-color: #f7a253;
+}
+.monitor[etat="9"]{
+	background-color: #f75353;
+}
+
+/************/
+/*	reload	*/
+/************/
+
+.reload{
+	width: 70%;
+	margin: auto;
+
+	text-align: center;
+}
+
+.reload *{
+	vertical-align: middle;
+}
+
+.reload progress[value]{
+	-webkit-appearance: none;
+  	appearance: none;
+
+  	width: 95%;
+  	height: 5px;
+
+}
+
+.reload progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  background-color: #222;
+}
+
+.reload progress[value]::-webkit-progress-value {
+  border-radius: 2px; 
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  background-color: #27AE60;
+
+  -webkit-transition : width 1s linear;
+   -moz-transition : width 1s linear;
+     -o-transition : width 1s linear;
+        transition : width 1s linear;
+}
