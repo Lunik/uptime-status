@@ -1,6 +1,6 @@
-
 $(document).ready(initNotify);
 
+var n = {close: function(){}};
 function initNotify(){
 	$(document).attr('basetitle',$(document).attr('title'));
 	if (Notification.permission !== "granted"){
@@ -15,7 +15,7 @@ function notify(text){
 
 function notifyTitle(text){
 	if(text.length > 0)
-		$(document).attr('title',"("+text+")"+$(document).attr('basetitle'));
+		$(document).attr('title',"("+text+") "+$(document).attr('basetitle'));
 }
 
 function notifyCleanTitle(){
@@ -23,7 +23,8 @@ function notifyCleanTitle(){
 }
 
 function notifyBrowser(text){
-	new Notification('Lunik Status', {
+  n.close()
+	n = new Notification('Lunik Status', {
       icon: 'src/image/notify.png',
       body: text,
     });

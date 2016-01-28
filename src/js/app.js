@@ -76,7 +76,6 @@ function jsonUptimeRobotApi(data) {
 function updateMonitor(monitor){
 	if(monitor.friendlyname == null)
 		monitor = monitor[0];
-
 	var friendlyname = monitor.friendlyname.split(" ");
 	var appName = friendlyname[0];
 	var monitorName = friendlyname[1].toLowerCase();
