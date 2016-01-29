@@ -139,11 +139,12 @@ function updateViewMonitor (data) {
 function updateViewApp (appName) {
   var moyenneUptime = 0
   var moyenneStatus = 0
-  var nb = $('#' + appName + ' .monitor').length
+  var nb = 0
 
   $('#' + appName + ' .monitor').each(function () {
-    moyenneUptime += parseInt($(this).attr('uptime'), 10)
-    if ($(this).attr('etat') != 0) {
+    if (parseInt($(this).attr('etat'), 10) !== 0) {
+			nb++
+      moyenneUptime += parseInt($(this).attr('uptime'), 10)
       moyenneStatus += parseInt($(this).attr('etat'), 10)
     }
   })
