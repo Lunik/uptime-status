@@ -57,7 +57,7 @@ function update(){
 }
 
 /* load uptime variables from uptimerobot
-* this calls jsonUptimeRobotApi() when loaded  
+* this calls jsonUptimeRobotApi() when loaded
 */
 function getUptime(apikey){
 	var url = "//api.uptimerobot.com/getMonitors?apiKey=" + apikey + "&format=json&logs=1&logsLimit=5";
@@ -143,10 +143,12 @@ function updateViewApp(appName){
 
 	$("#"+appName+" .monitor").each(function(){
 		moyenneUptime += parseInt($(this).attr('uptime'),10);
-		moyenneStatus += parseInt($(this).attr('etat'),10);
+		if($(this).attr('etat') != 0){
+			moyenneStatus += parseInt($(this).attr('etat'),10);
+		}
 	});
 	moyenneUptime = Math.round(moyenneUptime/nb);
-	moyenneStatus = Math.round(moyenneStatus/nb);	
+	moyenneStatus = Math.round(moyenneStatus/nb);
 
 	if(moyenneStatus == 0){
 		$("#"+appName+" .app-uptime").attr('etat','0').text(moyenneUptime+"%");
