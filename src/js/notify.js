@@ -1,35 +1,35 @@
-$(document).ready(initNotify);
+$(document).ready(initNotify)
 
-var n = {close: function(){}};
-function initNotify(){
-	$(document).attr('basetitle',$(document).attr('title'));
-	if (Notification.permission !== "granted"){
-		Notification.requestPermission();
-	}
+var n = {close: function () {}}
+function initNotify () {
+  $(document).attr('basetitle', $(document).attr('title'))
+  if (Notification.permission !== 'granted') {
+    Notification.requestPermission()
+  }
 }
 
-function notify(text){
-	notifyTitle(text);
-	notifyBrowser(text);
+function notify (text) {
+  notifyTitle(text)
+  notifyBrowser(text)
 }
 
-function notifyTitle(text){
-	if(text.length > 0)
-		$(document).attr('title',"("+text+") "+$(document).attr('basetitle'));
+function notifyTitle (text) {
+  if (text.length > 0)
+    $(document).attr('title', '(' + text + ') ' + $(document).attr('basetitle'))
 }
 
-function notifyCleanTitle(){
-	$(document).attr('title',$(document).attr('basetitle'));
+function notifyCleanTitle () {
+  $(document).attr('title', $(document).attr('basetitle'))
 }
 
-function notifyBrowser(text){
+function notifyBrowser (text) {
   n.close()
-	n = new Notification('Lunik Status', {
-      icon: 'src/image/notify.png',
-      body: text,
-    });
+  n = new Notification('Lunik Status', {
+    icon: 'src/image/notify.png',
+    body: text,
+  })
 }
 
-$(window).focus(function(){
-	notifyCleanTitle();
-});
+$(window).focus(function () {
+  notifyCleanTitle()
+})
